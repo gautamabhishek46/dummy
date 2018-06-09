@@ -19,10 +19,10 @@ stages:
         -   ./scripts/hello
     - name: Build
       scripts:
-        -   ./scripts/hello
+        -   ./scripts/build
     - name: Tests
       scripts:
-        -   ./scripts/hello
+        -   ./scripts/test
 
 archiveArtifacts:
     - Jenkinsfile.yaml
