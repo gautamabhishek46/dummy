@@ -10,8 +10,8 @@ agent:
 #buildResultPaths:
 #    - path-1
 
-#testResultPaths:
-#    - path-1
+testResultPaths:
+    - target/surefire-reports/*.xml
 
 stages:
     - name: First
