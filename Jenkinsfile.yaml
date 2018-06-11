@@ -4,7 +4,8 @@ artifactPublishingConfig:
     user: user53
     credentialId: dummyGitRepo
 
-agent: any
+agent:
+	dockerImage: maven:3.5.3-jdk-8
 
 #buildResultPaths:
 #    - path-1
