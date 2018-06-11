@@ -4,8 +4,7 @@ artifactPublishingConfig:
     user: user53
     credentialId: dummyGitRepo
 
-agent: 
-    dockerImage: library/hello-world
+agent: any
 
 #buildResultPaths:
 #    - path-1
