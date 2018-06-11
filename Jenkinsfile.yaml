@@ -12,6 +12,8 @@ agent: any
 testResultPaths:
     - target/surefire-reports/*.xml
 
+findbugs: target/*.xml
+
 stages:
     - name: First
       scripts:
