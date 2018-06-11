@@ -1,1 +1,1 @@
-echo "This will be a build script"
+mvn --batch-mode --errors clean install
