@@ -5,6 +5,7 @@ artifactPublishingConfig:
 
 agent:
     dockerImage: maven:3.5.3-jdk-8
+    args: -v /tmp:/tmp
 
 #buildResultPaths:
 #    - path-1
