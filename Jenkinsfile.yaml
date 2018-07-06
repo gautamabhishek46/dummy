@@ -1,30 +1,24 @@
+gitCredentialId: dummyGitRepo
 artifactPublishingConfig:
     host: 192.32.52.12
     user: user53
     credentialId: dummyGitRepo
 
-agent:
-    dockerImage: maven:3.5.3-jdk-8
-    args: -v /tmp:/tmp
-
-#buildResultPaths:
-#    - path-1
-
-testResultPaths:
-    - target/surefire-reports/*.xml
-
-findBugs: target/*.xml
+agent: any
 
 stages:
     - name: First
-      scripts:
-        -   ./scripts/hello
+      steps:
+        - sh './scripts/hello'
     - name: Build
-      scripts:
-        -   ./scripts/build
+      steps:
+        - stepName: sh
+          parameters:
+            script: './scripts/hello'
     - name: Tests
-      scripts:
-        -   ./scripts/test
+      steps:
+        - stepName: sh
+          defaultParameter: ./scripts/hello
 
 archiveArtifacts:
     - Jenkinsfile.yaml
@@ -35,3 +29,4 @@ publishArtifacts:
       to: ~/archives
     - from: scripts/hello.sh
       to: ~/archives
+
