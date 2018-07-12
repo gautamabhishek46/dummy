@@ -1,32 +1,18 @@
-gitCredentialId: dummyGitRepo
-artifactPublishingConfig:
-    host: 192.32.52.12
-    user: user53
-    credentialId: dummyGitRepo
-
 agent: any
+
+findBugs: target/*.xml
 
 stages:
     - name: First
       steps:
-        - sh './scripts/hello'
+        - sh: "./scripts/hello"
     - name: Build
       steps:
-        - stepName: sh
-          parameters:
-            script: './scripts/hello'
+        - sh: "./scripts/build"
     - name: Tests
       steps:
-        - stepName: sh
-          defaultParameter: ./scripts/hello
+        - sh: "./scripts/test"
 
 archiveArtifacts:
     - Jenkinsfile.yaml
     - scripts/hello.sh
-
-publishArtifacts:
-    - from: Jenkinsfile.yaml
-      to: ~/archives
-    - from: scripts/hello.sh
-      to: ~/archives
-
