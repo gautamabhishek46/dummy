@@ -1,7 +1,5 @@
 agent: any
 
-findBugs: target/*.xml
-
 stages:
     - name: First
       agent: any
