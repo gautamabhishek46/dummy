@@ -4,15 +4,15 @@ findBugs: target/*.xml
 
 stages:
     - name: First
-	  agent: any
+      agent: any
       steps:
         - sh: "./scripts/hello"
     - name: Build
-	  agent: any
+      agent: any
       steps:
         - sh: "./scripts/build"
     - name: Tests
-	  agent: any
+      agent: any
       steps:
         - sh: "./scripts/test"
 
