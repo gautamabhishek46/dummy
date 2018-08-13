@@ -4,15 +4,15 @@ stages:
     - name: First
       agent: any
       steps:
-        - sh: "./scripts/hello"
+        - sh: "./scripts/hello.sh"
     - name: Build
       agent: any
       steps:
-        - sh: "./scripts/build"
+        - sh: "./scripts/build.sh"
     - name: Tests
       agent: any
       steps:
-        - sh: "./scripts/test"
+        - sh: "./scripts/test.sh"
 
 configuration:
     archiveArtifacts:
